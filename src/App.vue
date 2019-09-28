@@ -28,7 +28,7 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+       <router-view></router-view>
     </v-content>
 
     <v-footer>
@@ -40,11 +40,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import Product from './views/Product';   
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+    Product
   },
   data: () => ({
     //

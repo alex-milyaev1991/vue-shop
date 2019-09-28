@@ -3,6 +3,7 @@
     <v-row>
       <v-col>
         <h2>Popular products</h2>
+        <span v-for="item of products" :key="item.key"> {{item.title}}</span>
       </v-col>
     </v-row>
     <v-row
@@ -146,10 +147,23 @@
 </template>
 
 <script>
+import { db } from '../main'
 export default {
-  data: () => ({
-    
-  }),
+  data() {
+    return {
+      products: [],
+      newReptile: ''
+    }
+  },
+  firestore() {
+    return {
+      products: db.collection('products'),
+    }
+  },
+  created() {
+    /*console.log(products)*/
+    console.log(this.products)
+  }
 };
 </script>
 
