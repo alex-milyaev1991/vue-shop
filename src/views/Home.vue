@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    dssdfdsfs
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from '../components/HelloWorld';
 
 export default {
-  name: 'home',
   components: {
-    HelloWorld
+    HelloWorld,
+  },
+  data() {
+    return {
+      products: [],
+      newReptile: ''
+    }
+  },
+  firestore() {
+    return {
+      products: db.collection('products'),
+    }
+  },
+  created() {
+    /*console.log(products)*/
+    console.log(this.products)
   }
-}
+};
 </script>
