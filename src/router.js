@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Product from './views/Product.vue'
+import AddProduct from './views/AddProduct.vue'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/product',
       name: 'product',
       component: Product
+    },
+    {
+      path: '/add-product',
+      name: 'add-product',
+      component: AddProduct
     },
     {
       path: '/about',

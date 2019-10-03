@@ -15,12 +15,14 @@ const firebaseApp = firebase.initializeApp({
   authDomain: 'vue-test-shop.firebaseapp.com',
   databaseURL: 'https://vue-test-shop.firebaseio.com',
   projectId: 'vue-test-shop',
-  storageBucket: '',
+  storageBucket: 'gs://vue-test-shop.appspot.com',
   messagingSenderId: '579281804672',
   appId: '1:579281804672:web:856e70debae0074e8f3565'
 });
 
 export const db = firebaseApp.firestore();
+export const storage = firebase.storage();
+export const storageRef = storage.ref();
 
 
 new Vue({

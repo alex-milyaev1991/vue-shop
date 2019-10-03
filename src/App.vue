@@ -39,15 +39,9 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-import Product from './views/Product';   
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
-    Product
-  },
   data: () => ({
     //
   }),

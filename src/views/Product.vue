@@ -10,41 +10,7 @@
       justify="center"
     >
       <v-col lg="4">  
-        <div class="gallery">
-            <v-img
-            class="white--text"
-            height="200px"
-            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-          >
-          </v-img>
-        </div>
-        <v-row>
-            <v-col
-              v-for="n in 3"
-              :key="n"
-              class="d-flex child-flex"
-              cols="4"
-            >
-              <v-card flat tile class="d-flex">
-                <v-img
-                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-                  aspect-ratio="1"
-                  class="grey lighten-2"
-                >
-                  <template v-slot:placeholder>
-                    <v-row
-                      class="fill-height ma-0"
-                      align="center"
-                      justify="center"
-                    >
-                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                    </v-row>
-                  </template>
-                </v-img>
-              </v-card>
-            </v-col>
-          </v-row>
+        <product-gallery :images="product.gallery"></product-gallery>
       </v-col>
       <v-col lg="8">
         <div class="text-left">
@@ -79,9 +45,11 @@
 <script>
 import { db } from '../main'
 import Testimonials from '../components/Testimonials'
+import ProductGallery from '../components/ProductGallery'
 export default {
   components: {
-    testimonials: Testimonials
+    testimonials: Testimonials,
+    productGallery: ProductGallery
   },
   data() {
     return {
@@ -95,7 +63,7 @@ export default {
               {
                   id: '32344',
                   url: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-                  isMain: true
+                  isMain: false
               },
               {
                   id: '32345',
