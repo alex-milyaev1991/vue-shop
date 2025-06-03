@@ -1,0 +1,44 @@
+@use './variables' as *;
+
+.header {
+  border-bottom: 1px solid #000;
+}
+
+main {
+  .holder {
+    display: flex;
+    gap: 15px;
+
+    .content {
+      flex-grow: 1;
+    }
+  }
+}
+
+.aside {
+  min-width: 300px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  &_holder {
+    position: relative;
+    height: 100%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &_btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+}

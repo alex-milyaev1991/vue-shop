@@ -1,0 +1,8 @@
+@use './variables' as *;
+
+@layer base {
+  body {
+    background-color: $background-color-base;
+    font-family: $font-family-base;
+  }
+} 
